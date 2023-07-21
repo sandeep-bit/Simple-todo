@@ -3,7 +3,7 @@ function TodoItem({todo}){
     const {title , completed} = todo;
     return <div className={styles.todoItem}>
         <h3>{title}</h3>
-        <input type="checkbox" />
+        <input type="checkbox" disabled checked={completed}/>
     </div>
 }
 
