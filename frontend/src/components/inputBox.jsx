@@ -2,15 +2,17 @@ import Button from "./Button";
 import styles from "./inputBox.module.css";
 import axios from "axios";
 import { useState } from "react";
+import { useCtx } from "../context/Todocontext";
 
 function InputBox() {
-    
     const [value , setValue] = useState("");
+    const {dispatch} = useCtx();
 
     async function handleClick() {
         try {
-            await axios.post("http://localhost:8000/api/todo" , {title : value});
-            setValue("");
+            const response = await axios.post("http://localhost:8000/api/todo" , {title : value});
+            dispatch({type : "ADD_TODO" , payload : response.data});
+
         } catch (error) {
             console.log(error);
         }

@@ -27,6 +27,7 @@ exports.getTodo = async (req, res) => {
 };
 
 exports.updateTodo = async (req, res) => {
+  console.log(req.params.id)
   try {
     const todo = await Todo.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
