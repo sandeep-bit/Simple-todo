@@ -1,7 +1,8 @@
 import styles from './Todoitem.module.css'
-function TodoItem(){
+function TodoItem({todo}){
+    const {title , completed} = todo;
     return <div className={styles.todoItem}>
-        <h3>Buy clothes</h3>
+        <h3>{title}</h3>
         <input type="checkbox" />
     </div>
 }
