@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-app.use("/todo", todoRoute);
+app.use("/api/todo", todoRoute);
 connectToDatabase(
   "mongodb+srv://bashyalsandeep222:Node123@practise.tjyzj1m.mongodb.net/"
 )
