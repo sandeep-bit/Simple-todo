@@ -1,0 +1,16 @@
+.todoItem {
+    background-color:#a5b4fc;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 400px;
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+   
+}
